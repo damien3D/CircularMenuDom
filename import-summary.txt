@@ -1,0 +1,112 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+* Debug/
+* Debug/jni/
+* Debug/jni/subdir.mk
+* Debug/makefile
+* Debug/obj/
+* Debug/obj/local/
+* Debug/obj/local/armeabi-v7a/
+* Debug/obj/local/armeabi-v7a/objs-debug/
+* Debug/obj/local/armeabi-v7a/objs-debug/Dominoes/
+* Debug/obj/local/armeabi-v7a/objs-debug/Dominoes/subdir.mk
+* Debug/obj/local/armeabi-v7a/objs/
+* Debug/obj/local/armeabi-v7a/objs/Dominoes/
+* Debug/obj/local/armeabi-v7a/objs/Dominoes/subdir.mk
+* Debug/obj/local/armeabi/
+* Debug/obj/local/armeabi/objs-debug/
+* Debug/obj/local/armeabi/objs-debug/Dominoes/
+* Debug/obj/local/armeabi/objs-debug/Dominoes/subdir.mk
+* Debug/obj/local/armeabi/objs/
+* Debug/obj/local/armeabi/objs/Dominoes/
+* Debug/obj/local/armeabi/objs/Dominoes/subdir.mk
+* Debug/objects.mk
+* Debug/sources.mk
+* QCAR/
+* QCAR/Area.h
+* QCAR/CameraCalibration.h
+* QCAR/CameraDevice.h
+* QCAR/CylinderTarget.h
+* QCAR/CylinderTargetResult.h
+* QCAR/DataSet.h
+* QCAR/Frame.h
+* QCAR/Image.h
+* QCAR/ImageTarget.h
+* QCAR/ImageTargetBuilder.h
+* QCAR/ImageTargetResult.h
+* QCAR/ImageTracker.h
+* QCAR/Marker.h
+* QCAR/MarkerResult.h
+* QCAR/MarkerTracker.h
+* QCAR/Matrices.h
+* QCAR/MultiTarget.h
+* QCAR/MultiTargetResult.h
+* QCAR/NonCopyable.h
+* QCAR/Obb2D.h
+* QCAR/QCAR.h
+* QCAR/Rectangle.h
+* QCAR/Renderer.h
+* QCAR/State.h
+* QCAR/System.h
+* QCAR/TargetFinder.h
+* QCAR/TargetSearchResult.h
+* QCAR/TextTracker.h
+* QCAR/Tool.h
+* QCAR/Trackable.h
+* QCAR/TrackableResult.h
+* QCAR/TrackableSource.h
+* QCAR/Tracker.h
+* QCAR/TrackerManager.h
+* QCAR/UpdateCallback.h
+* QCAR/Vectors.h
+* QCAR/VideoBackgroundConfig.h
+* QCAR/VideoBackgroundTextureInfo.h
+* QCAR/VideoMode.h
+* QCAR/VirtualButton.h
+* QCAR/VirtualButtonResult.h
+* QCAR/Word.h
+* QCAR/WordList.h
+* QCAR/WordResult.h
+* license.txt
+* media/
+* media/stones.jpg
+* media/target_stones_A4.pdf
+* media/target_stones_USLetter.pdf
+* readme.txt
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* AndroidManifest.xml => app/src/main/AndroidManifest.xml
+* assets/ => app/src/main/assets/
+* jni/ => app/src/main/jni/
+* libs/armeabi-v7a/libDominoes.so => app/src/main/jniLibs/armeabi-v7a/libDominoes.so
+* libs/armeabi-v7a/libQCAR.so => app/src/main/jniLibs/armeabi-v7a/libQCAR.so
+* libs/armeabi/libDominoes.so => app/src/main/jniLibs/armeabi/libDominoes.so
+* libs/armeabi/libQCAR.so => app/src/main/jniLibs/armeabi/libQCAR.so
+* res/ => app/src/main/res/
+* src/ => app/src/main/java/
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

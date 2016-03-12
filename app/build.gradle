@@ -1,0 +1,43 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "com.qualcomm.QCARSamples.Dominoes"
+        minSdkVersion 8
+        targetSdkVersion 10
+
+        //ndk {
+        //    moduleName "QCAR-prebuilt"
+        //}
+    }
+// begin
+    sourceSets.main {
+        //jniLibs.srcDir = ['src/main/jniLibs']
+        jni.srcDirs = [] //disable automatic ndk-build call
+        // jniLibs.srcDir 'src/main/jniLibs' // This is not necessary unless you have precompiled libraries in your project.
+    }
+    task ndkBuild(type: Exec, description: 'Compile JNI source via NDK') {
+        commandLine "/home/rdaneel/Android/Sdk/ndk-bundle/ndk-build",
+                'NDK_PROJECT_PATH=build/intermediates/ndk',
+                'NDK_LIBS_OUT=src/main/jniLibs',
+                'APP_BUILD_SCRIPT=src/main/jni/Android.mk',
+                'NDK_APPLICATION_MK=src/main/jni/Application.mk'
+    }
+    tasks.withType(JavaCompile) {
+        compileTask -> compileTask.dependsOn ndkBuild
+    }
+    //end
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies{
+    compile files('libs/QCAR.jar')
+}
